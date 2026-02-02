@@ -1,0 +1,172 @@
+"use client";
+
+import Orb from "./ui/Orb";
+import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+});
+
+export default function ContactSection() {
+  const [showEmail, setShowEmail] = useState(false);
+
+  return (
+    <section
+      id="contact"
+      className="
+        relative
+        h-screen
+        w-full
+        bg-gradient-to-b
+        from-[#00030d]
+        via-[#030c34]
+        to-[#00030d]
+        flex
+        flex-col
+        justify-center
+      "
+    >
+      {/* ORB */}
+      <div className="relative w-full h-[600px] flex items-center justify-center">
+        <Orb
+          hoverIntensity={2}
+          rotateOnHover
+          hue={0}
+          forceHoverState={false}
+          backgroundColor="#000000"
+        />
+
+        {/* CONTENT INSIDE ORB */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+          {/* TEXT */}
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className={`text-center text-white ${playfair.className}`}
+          >
+            <h1
+              className="
+                text-6xl md:text-7xl
+                tracking-wide
+                leading-none
+                drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]
+              "
+            >
+              LET’S
+            </h1>
+            <h1
+              className="
+                text-6xl md:text-7xl
+                italic
+                mt-1
+                drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]
+              "
+            >
+              TALK
+            </h1>
+          </motion.div>
+
+          {/* ICONS */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="flex gap-6 mt-8 pointer-events-auto"
+          >
+            {/* LINKEDIN */}
+            <a
+              href="https://www.linkedin.com/in/yukti-singh-2bb1002b4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                w-12 h-12
+                rounded-full
+                border border-white/30
+                backdrop-blur-md
+                flex items-center justify-center
+                text-white/70
+                hover:text-white
+                hover:scale-105
+                hover:border-white
+                transition-all duration-300
+              "
+            >
+              <FaLinkedinIn size={18} />
+            </a>
+
+            {/* EMAIL */}
+            <button
+              onClick={() => setShowEmail(!showEmail)}
+              className="
+                w-12 h-12
+                rounded-full
+                border border-white/30
+                backdrop-blur-md
+                flex items-center justify-center
+                text-white/70
+                hover:text-white
+                hover:scale-105
+                hover:border-white
+                transition-all duration-300
+              "
+            >
+              <FaEnvelope size={18} />
+            </button>
+          </motion.div>
+
+          {/* EMAIL TEXT */}
+          <AnimatePresence>
+            {showEmail && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.35 }}
+                className="
+                  mt-5
+                  px-5 py-2
+                  rounded-full
+                  text-sm
+                  text-white/70
+                  backdrop-blur-lg
+                  border border-white/10
+                "
+              >
+                yuktisingh2005@gmail.com
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* FULL WIDTH FOOTER */}
+      <motion.footer
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="
+          w-full
+          mt-auto
+          px-6 py-6
+          backdrop-blur-2xl
+          bg-white/5
+          border-t border-white/10
+          text-center
+          text-sm
+          text-white/60
+        "
+      >
+        <p>© 2026 Yukti. All rights reserved.</p>
+        <p className="mt-1">
+          Designed & Built with <span className="text-red-400">♥</span> and lots
+          of ☕
+        </p>
+      </motion.footer>
+    </section>
+  );
+}
