@@ -80,7 +80,7 @@ export default function ContactSection() {
                 drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]
               "
             >
-              TALK
+              CONNECT
             </h1>
           </motion.div>
 

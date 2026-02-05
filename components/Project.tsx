@@ -34,7 +34,7 @@ const projectData = [
     description: 'Automated invoice processing via Telegram to Google Drive & Excel using n8n.',
     label: 'Automation',
     imageUrl: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop',
-    projectLink: ''
+    projectLink: 'https://drive.google.com/file/d/1HrjDtVWkhWcsxYykLJjyHCN1PSLKAKiY/view?usp=drive_link'
   }
 ];
 
