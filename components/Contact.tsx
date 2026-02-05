@@ -19,7 +19,7 @@ export default function ContactSection() {
       id="contact"
       className="
         relative
-        h-screen
+        min-h-screen
         w-full
         bg-gradient-to-b
         from-[#00030d]
@@ -31,7 +31,7 @@ export default function ContactSection() {
       "
     >
       {/* ORB */}
-      <div className="relative w-full h-[600px] flex items-center justify-center">
+      <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] flex items-center justify-center px-4">
         <Orb
           hoverIntensity={2}
           rotateOnHover
@@ -51,17 +51,17 @@ export default function ContactSection() {
           >
             <h1
               className="
-                text-6xl md:text-7xl
+                text-4xl sm:text-5xl md:text-6xl lg:text-7xl
                 tracking-wide
                 leading-none
                 drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]
               "
             >
-              LET’S
+              LET'S
             </h1>
             <h1
               className="
-                text-6xl md:text-7xl
+                text-4xl sm:text-5xl md:text-6xl lg:text-7xl
                 italic
                 mt-1
                 drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]
@@ -76,7 +76,7 @@ export default function ContactSection() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="flex gap-6 mt-8 pointer-events-auto"
+            className="flex gap-4 sm:gap-6 mt-6 sm:mt-8 pointer-events-auto"
           >
             {/* LINKEDIN */}
             <a
@@ -84,7 +84,7 @@ export default function ContactSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                w-12 h-12
+                w-10 h-10 sm:w-12 sm:h-12
                 rounded-full
                 border border-white/30
                 backdrop-blur-md
@@ -96,14 +96,14 @@ export default function ContactSection() {
                 transition-all duration-300
               "
             >
-              <FaLinkedinIn size={18} />
+              <FaLinkedinIn size={16} className="sm:w-[18px] sm:h-[18px]" />
             </a>
 
             {/* EMAIL */}
             <button
               onClick={() => setShowEmail(!showEmail)}
               className="
-                w-12 h-12
+                w-10 h-10 sm:w-12 sm:h-12
                 rounded-full
                 border border-white/30
                 backdrop-blur-md
@@ -115,7 +115,7 @@ export default function ContactSection() {
                 transition-all duration-300
               "
             >
-              <FaEnvelope size={18} />
+              <FaEnvelope size={16} className="sm:w-[18px] sm:h-[18px]" />
             </button>
           </motion.div>
 
@@ -128,13 +128,15 @@ export default function ContactSection() {
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.35 }}
                 className="
-                  mt-5
-                  px-5 py-2
+                  mt-4 sm:mt-5
+                  px-4 sm:px-5 py-2
                   rounded-full
-                  text-sm
+                  text-xs sm:text-sm
                   text-white/70
                   backdrop-blur-lg
                   border border-white/10
+                  max-w-[90vw]
+                  break-all
                 "
               >
                 yuktisingh2005@gmail.com
@@ -145,23 +147,22 @@ export default function ContactSection() {
       </div>
 
       {/* FULL WIDTH FOOTER */}
-      {/* FULL WIDTH FOOTER */}
       <footer
         className="
           w-full
           mt-auto
-          px-6 py-6
+          px-4 sm:px-6 py-4 sm:py-6
           backdrop-blur-2xl
           bg-white/5
           border-t border-white/10
           text-center
-          text-sm
+          text-xs sm:text-sm
           text-white/60
         "
       >
         <p>© 2026 Yukti. All rights reserved.</p>
         <p className="mt-1">
-          Designed & Built with <span className="text-red-400">♥</span> and lots
+          Designed & Built with <span className="text-white">♥</span> and lots
           of ☕
         </p>
       </footer>

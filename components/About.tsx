@@ -2,7 +2,6 @@
 
 import LiquidEther from "@/components/ui/LiquidEther";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import { IconHome, IconUser, IconBriefcase, IconFolder, IconMail } from "@tabler/icons-react";
 import BlurText from "@/components/ui/BlurText";
 import ShinyText from "@/components/ui/ShinyText";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
@@ -14,27 +13,22 @@ const navItems = [
   {
     name: "Home",
     link: "#hero",
-    icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "About",
     link: "#about",
-    icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Work",
     link: "#experience",
-    icon: <IconBriefcase className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Projects",
     link: "#projects",
-    icon: <IconFolder className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Contact",
     link: "#contact",
-    icon: <IconMail className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
 ];
 
@@ -51,7 +45,7 @@ export function FloatingPhoto() {
           alt="Yukti"
           width={420}
           height={420}
-          className="rounded-2xl object-cover shadow-2xl w-full max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[420px] h-auto"
+          className="rounded-2xl object-cover shadow-2xl w-full max-w-[200px] sm:max-w-[250px] md:max-w-[300px] lg:max-w-[350px] xl:max-w-[420px] h-auto"
         />
       </CardItem>
     </CardContainer>
@@ -92,32 +86,32 @@ export default function About() {
       </div>
 
       {/* CONTENT */}
-      <div className="absolute inset-0 z-40 flex h-full items-center px-4 sm:px-8 md:px-12 lg:px-24">
-        <div className="w-full flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-0">
+      <div className="absolute inset-0 z-40 flex h-full items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-20 sm:py-24">
+        <div className="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 lg:gap-12 xl:gap-16">
           {/* LEFT TEXT */}
-          <div className="w-full lg:w-1/2 flex flex-col gap-4 text-center lg:text-left">
+          <div className="w-full lg:w-1/2 flex flex-col gap-3 sm:gap-4 text-center lg:text-left max-w-2xl">
             <BlurText
               text="Hi!"
               delay={200}
               animateBy="words"
               direction="top"
-              className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white"
             />
 
             <ShinyText
               text="I'm Yukti Singh,"
-              className="text-xl sm:text-2xl md:text-3xl"
+              className="text-xl sm:text-2xl md:text-2xl lg:text-3xl"
             />
 
             <TextGenerateEffect
               words="Working as a Software Developer and Automation Expert."
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#f2f1f7]"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-[#f2f1f7]"
             />
 
             {/* Glassy Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center lg:justify-start">
               <motion.button
-                className="px-4 sm:px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white font-medium hover:bg-white/20 transition-all duration-300 shadow-[0_8px_32px_rgba(31,38,135,0.37)] hover:shadow-[0_8px_32px_rgba(31,38,135,0.6)] text-sm sm:text-base"
+                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white font-medium hover:bg-white/20 transition-all duration-300 shadow-[0_8px_32px_rgba(31,38,135,0.37)] hover:shadow-[0_8px_32px_rgba(31,38,135,0.6)] text-sm sm:text-base"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
@@ -131,7 +125,7 @@ export default function About() {
               </motion.button>
 
               <motion.button
-                className="px-4 sm:px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-md border border-purple-500/30 rounded-xl text-white font-medium hover:from-purple-500/30 hover:to-blue-500/30 transition-all duration-300 shadow-[0_8px_32px_rgba(82,39,255,0.37)] hover:shadow-[0_8px_32px_rgba(82,39,255,0.6)] text-sm sm:text-base"
+                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-md border border-purple-500/30 rounded-xl text-white font-medium hover:from-purple-500/30 hover:to-blue-500/30 transition-all duration-300 shadow-[0_8px_32px_rgba(82,39,255,0.37)] hover:shadow-[0_8px_32px_rgba(82,39,255,0.6)] text-sm sm:text-base"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
@@ -145,7 +139,7 @@ export default function About() {
           </div>
 
           {/* RIGHT FLOATING PHOTO */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <FloatingPhoto />
           </div>
         </div>

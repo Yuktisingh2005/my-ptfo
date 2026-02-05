@@ -43,20 +43,30 @@ export default function Hero() {
         <LightRays
   raysOrigin="top-center"
   raysColor="#ffffff"
-  raysSpeed={isMobile ? 2.2 : 1.5}
-  lightSpread={isMobile ? 1.4 : 0.8}
-  rayLength={isMobile ? 4.5 : 3.0}
+
+  // 🔥 stronger + more focused
+  raysSpeed={isMobile ? 2.8 : 1.5}
+  lightSpread={isMobile ? 0.55 : 0.8}
+  rayLength={isMobile ? 6.0 : 3.0}
+  fadeDistance={isMobile ? 3.0 : 1.5}
+
+  
+  // brightness & punch
+  saturation={isMobile ? 1.6 : 1.2}
   pulsating
-  fadeDistance={isMobile ? 2.2 : 1.5}
-  saturation={isMobile ? 1.4 : 1.2}
+
+  // fake motion on mobile
   followMouse={
     typeof window !== 'undefined' &&
     window.matchMedia('(pointer: fine)').matches
   }
-  mouseInfluence={isMobile ? 0.15 : 0.3}
-  noiseAmount={0.02}
-  distortion={isMobile ? 0.18 : 0.1}
-  className={isMobile ? 'opacity-90' : 'opacity-80'}
+  mouseInfluence={isMobile ? 0.08 : 0.3}
+
+  // texture
+  noiseAmount={0.015}
+  distortion={isMobile ? 0.22 : 0.1}
+
+  className={isMobile ? 'opacity-95' : 'opacity-80'}
 />
 
 
