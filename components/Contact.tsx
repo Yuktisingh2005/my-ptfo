@@ -26,13 +26,24 @@ export default function ContactSection() {
         via-[#030c34]
         to-[#00030d]
         flex
+        flex
         flex-col
-        justify-between
-        md:justify-center
+        items-center
       "
     >
       {/* ORB */}
-      <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] flex items-center justify-center px-4 flex-shrink-0">
+      {/* ORB */}
+<div
+  className="
+    relative
+    w-full
+    h-[360px] sm:h-[500px] md:h-[600px]
+    flex items-center justify-center
+    px-4
+    mb-6 sm:mb-12 md:mb-0
+  "
+>
+
         <Orb
           hoverIntensity={2}
           rotateOnHover
@@ -163,7 +174,7 @@ export default function ContactSection() {
       >
         <p>© 2026 Yukti. All rights reserved.</p>
         <p className="mt-1">
-          Designed & Built with <span className="text-white">♥</span> and lots
+          Designed & Built with <span className="text-black">♥</span> and lots
           of ☕
         </p>
       </footer>
