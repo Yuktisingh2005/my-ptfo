@@ -129,7 +129,7 @@ export default function About() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
-                  // Add your resume link here
+      
                   window.open('/resume.pdf', '_blank');
                 }}
               >

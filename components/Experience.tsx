@@ -91,9 +91,12 @@ const timelineData = [
         </div>
 
         <div className="flex gap-3">
-          <button className="px-4 sm:px-6 py-1.5 sm:py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 text-xs sm:text-sm font-medium">
-            View Certificate
-          </button>
+          <button
+  onClick={() => window.open("/neuraltalk.pdf", "_blank")}
+  className="px-4 sm:px-6 py-1.5 sm:py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 text-xs sm:text-sm font-medium"
+>
+  View Certificate
+</button>
         </div>
       </div>
     ),
@@ -134,7 +137,9 @@ const timelineData = [
         </div>
 
         <div className="flex gap-3">
-          <button className="px-4 sm:px-6 py-1.5 sm:py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 text-xs sm:text-sm font-medium">
+          <button 
+          onClick={() => window.open("/drdo.pdf", "_blank")}
+          className="px-4 sm:px-6 py-1.5 sm:py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 text-xs sm:text-sm font-medium">
             View Certificate
           </button>
         </div>
@@ -176,7 +181,9 @@ const timelineData = [
         </div>
 
         <div className="flex gap-3">
-          <button className="px-4 sm:px-6 py-1.5 sm:py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 text-xs sm:text-sm font-medium">
+          <button
+          onClick={() => window.open("/weroute.pdf", "_blank")}
+           className="px-4 sm:px-6 py-1.5 sm:py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 text-xs sm:text-sm font-medium">
             View Certificate
           </button>
         </div>

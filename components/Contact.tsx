@@ -175,7 +175,7 @@ export default function ContactSection() {
       >
         <p>© 2026 Yukti. All rights reserved.</p>
         <p className="mt-1">
-          Designed & Built with <span className="text-red-950">♥</span> and lots
+          Designed & Built with <span className="text-shadow-white">♥</span> and lots
           of ☕
         </p>
       </footer>

@@ -9,28 +9,32 @@ const projectData = [
     title: 'Complaint Management System',
     description: 'Web-based system with role-based access, PHP backend, and MySQL database',
     label: 'Full-Stack',
-    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop'
+    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+    projectLink: 'https://drive.google.com/file/d/17Ikxg_gD9B3LjCdLl01NzwqzPJiYRaRz/view?usp=sharing'
   },
   {
     color: '#060010',
     title: 'Glint – Media Gallery',
     description: 'Next.js gallery with AWS S3, JWT auth, and smart organization',
     label: 'AI-Powered',
-    imageUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop'
+    imageUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop',
+    projectLink: 'https://glintgallery.vercel.app/hero'
   },
   {
     color: '#060010',
     title: 'Facial Analysis App',
     description: 'Real-time emotion, gender & age detection using face-api.js',
     label: 'Computer Vision',
-    imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop'
+    imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop',
+    projectLink: 'https://face-detection-nu-two.vercel.app/'
   },
   {
     color: '#060010',
     title: 'AI Workflow Agent',
     description: 'Automated invoice processing via Telegram to Google Drive & Excel using n8n.',
     label: 'Automation',
-    imageUrl: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop'
+    imageUrl: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop',
+    projectLink: ''
   }
 ];
 
@@ -107,9 +111,15 @@ const variants = {
           </p>
         </div>
 
-        <button className="preview-btn self-start px-4 py-2 rounded-lg text-white text-sm font-medium">
-          Preview Project
-        </button>
+        <a
+  href={project.projectLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="preview-btn self-start px-4 py-2 rounded-lg text-white text-sm font-medium"
+>
+  Preview Project
+</a>
+
       </div>
     </motion.div>
   );
