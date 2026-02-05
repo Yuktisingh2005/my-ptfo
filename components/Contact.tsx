@@ -19,7 +19,8 @@ export default function ContactSection() {
       id="contact"
       className="
         relative
-        min-h-screen
+        md:min-h-screen
+
         w-full
         bg-gradient-to-b
         from-[#00030d]
@@ -174,7 +175,7 @@ export default function ContactSection() {
       >
         <p>© 2026 Yukti. All rights reserved.</p>
         <p className="mt-1">
-          Designed & Built with <span className="text-black">♥</span> and lots
+          Designed & Built with <span className="text-red-950">♥</span> and lots
           of ☕
         </p>
       </footer>
