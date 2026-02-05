@@ -51,9 +51,9 @@ export default function Hero() {
         />
       </div>
 
-      <div className="text-center z-10 px-4 max-w-6xl">
+      <div className="text-center z-10 px-4 sm:px-6 md:px-8 max-w-6xl w-full">
         {/* Main text - simple font */}
-        <div className="font-sans text-5xl md:text-7xl lg:text-8xl text-white mb-8 relative">
+        <div className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-white mb-6 sm:mb-8 relative">
           <span className="text-white font-medium tracking-wide">
             {displayText}
           </span>
@@ -61,61 +61,61 @@ export default function Hero() {
         </div>
 
         {/* Colorful animated subtitle */}
-        <div className={`transition-all duration-1000 ease-out mb-16 ${showSubtext ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <p className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 via-green-500 via-yellow-500 to-pink-500 bg-clip-text text-transparent bg-[length:400%_400%]">
+        <div className={`transition-all duration-1000 ease-out mb-12 sm:mb-16 ${showSubtext ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-wide animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 via-green-500 via-yellow-500 to-pink-500 bg-clip-text text-transparent bg-[length:400%_400%]">
             {subText}
           </p>
         </div>
 
         {/* Glass effect status boxes */}
         <div className={`transition-all duration-1000 ease-out ${showElements ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto">
 
             {/* Available for work */}
-            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(52,211,153,0.3)] animated-border">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-4 sm:p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(52,211,153,0.3)] animated-border">
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_rgba(52,211,153,0.8)]"></div>
                   <span className="text-emerald-400 text-xs font-semibold uppercase tracking-wider">Status</span>
                 </div>
-                <p className="text-white text-xl font-medium">Available for work</p>
+                <p className="text-white text-lg sm:text-xl font-medium">Available for work</p>
               </div>
             </div>
 
             {/* Experience */}
-            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(147,51,234,0.3)] animated-border">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-4 sm:p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(147,51,234,0.3)] animated-border">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-3 h-3 rounded-full bg-purple-400 animate-pulse shadow-[0_0_10px_rgba(147,51,234,0.8)]"></div>
                   <span className="text-purple-400 text-xs font-semibold uppercase tracking-wider">Experience</span>
                 </div>
-                <p className="text-white text-xl font-medium">2+ Years</p>
+                <p className="text-white text-lg sm:text-xl font-medium">2+ Years</p>
               </div>
             </div>
 
             {/* Response time */}
-            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] animated-border">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-4 sm:p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] animated-border">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-3 h-3 rounded-full bg-blue-400 animate-pulse shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
                   <span className="text-blue-400 text-xs font-semibold uppercase tracking-wider">Response Time</span>
                 </div>
-                <p className="text-white text-xl font-medium">{'<24 Hours'}</p>
+                <p className="text-white text-lg sm:text-xl font-medium">{'<24 Hours'}</p>
               </div>
             </div>
 
             {/* Businesses helped */}
-            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(251,191,36,0.3)] animated-border">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-4 sm:p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(251,191,36,0.3)] animated-border">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-3 h-3 rounded-full bg-yellow-400 animate-pulse shadow-[0_0_10px_rgba(251,191,36,0.8)]"></div>
                   <span className="text-yellow-400 text-xs font-semibold uppercase tracking-wider">Businesses</span>
                 </div>
-                <p className="text-white text-xl font-medium">15+ Helped</p>
+                <p className="text-white text-lg sm:text-xl font-medium">15+ Helped</p>
               </div>
             </div>
           </div>
