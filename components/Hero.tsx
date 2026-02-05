@@ -30,30 +30,33 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#00030d] via-[#030c34] to-[#00030d] flex items-center justify-center relative overflow-hidden">
+    <div className="min-h-[100svh] bg-gradient-to-b from-[#00030d] via-[#030c34] to-[#00030d] flex items-center justify-center relative overflow-hidden">
+
 
       {/* LightRays Background Effect */}
       <div className="absolute inset-0">
         <LightRays
-          raysOrigin="top-center"
-          raysColor="#ffffff"
-          raysSpeed={1.5}
-          lightSpread={0.8}
-          rayLength={3.0}
-          pulsating={true}
-          fadeDistance={1.5}
-          saturation={1.2}
-          followMouse={true}
-          mouseInfluence={0.3}
-          noiseAmount={0.02}
-          distortion={0.1}
-          className="opacity-80"
-        />
+  raysOrigin="top-center"
+  raysColor="#ffffff"
+  raysSpeed={1.2}
+  lightSpread={0.9}
+  rayLength={2.2}
+  pulsating
+  fadeDistance={1.3}
+  saturation={1.1}
+  followMouse={typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches}
+  mouseInfluence={0.25}
+  noiseAmount={0.015}
+  distortion={0.08}
+  className="opacity-70 sm:opacity-80"
+/>
+
       </div>
 
-      <div className="text-center z-10 px-4 sm:px-6 md:px-8 max-w-6xl w-full">
+      <div className="text-center z-10 px-4 max-w-6xl">
         {/* Main text - simple font */}
-        <div className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-white mb-6 sm:mb-8 relative">
+       <div className="font-sans text-[2.6rem] sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 sm:mb-8 relative break-all">
+
           <span className="text-white font-medium tracking-wide">
             {displayText}
           </span>
@@ -61,18 +64,19 @@ export default function Hero() {
         </div>
 
         {/* Colorful animated subtitle */}
-        <div className={`transition-all duration-1000 ease-out mb-12 sm:mb-16 ${showSubtext ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-wide animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 via-green-500 via-yellow-500 to-pink-500 bg-clip-text text-transparent bg-[length:400%_400%]">
+        <div className={`transition-all duration-1000 ease-out mb-16 ${showSubtext ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide animate-gradient bg-gradient-to-r from-pink-500 via-purple-500 via-blue-500 via-green-500 via-yellow-500 to-pink-500 bg-clip-text text-transparent bg-[length:400%_400%]">
             {subText}
           </p>
         </div>
 
         {/* Glass effect status boxes */}
         <div className={`transition-all duration-1000 ease-out ${showElements ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+
 
             {/* Available for work */}
-            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-4 sm:p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(52,211,153,0.3)] animated-border">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-5 sm:p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(52,211,153,0.3)] animated-border">
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-2">
@@ -84,7 +88,7 @@ export default function Hero() {
             </div>
 
             {/* Experience */}
-            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-4 sm:p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(147,51,234,0.3)] animated-border">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-5 sm:p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(147,51,234,0.3)] animated-border">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-2">
@@ -96,7 +100,7 @@ export default function Hero() {
             </div>
 
             {/* Response time */}
-            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-4 sm:p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] animated-border">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-5 sm:p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] animated-border">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-2">
@@ -108,7 +112,7 @@ export default function Hero() {
             </div>
 
             {/* Businesses helped */}
-            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-4 sm:p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(251,191,36,0.3)] animated-border">
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-5 sm:p-6 hover:from-white/15 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(251,191,36,0.3)] animated-border">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-2">
