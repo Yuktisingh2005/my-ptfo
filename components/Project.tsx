@@ -133,10 +133,19 @@ const ProjectBento = () => {
             transition: all 0.3s ease;
           }
 
-          .project-card:hover {
-            border-color: rgba(132, 0, 255, 0.5);
-            box-shadow: 0 8px 32px rgba(132, 0, 255, 0.15);
-            transform: translateY(-2px);
+          @media (max-width: 768px) {
+            .project-card {
+              border-color: rgba(132, 0, 255, 0.5);
+              box-shadow: 0 8px 32px rgba(132, 0, 255, 0.15);
+            }
+          }
+
+          @media (min-width: 769px) {
+            .project-card:hover {
+              border-color: rgba(132, 0, 255, 0.5);
+              box-shadow: 0 8px 32px rgba(132, 0, 255, 0.15);
+              transform: translateY(-2px);
+            }
           }
 
           .preview-btn {
