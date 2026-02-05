@@ -8,8 +8,13 @@ export default function Hero() {
   const [showSubtext, setShowSubtext] = useState(false);
   const [showElements, setShowElements] = useState(false);
 
+    const isMobile =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(max-width: 768px)').matches;
+
   const mainText = 'ideas.execute()';
   const subText = 'Where ideas come alive';
+
 
   useEffect(() => {
     let i = 0;
@@ -38,18 +43,22 @@ export default function Hero() {
         <LightRays
   raysOrigin="top-center"
   raysColor="#ffffff"
-  raysSpeed={1.2}
-  lightSpread={0.9}
-  rayLength={2.2}
+  raysSpeed={isMobile ? 2.2 : 1.5}
+  lightSpread={isMobile ? 1.4 : 0.8}
+  rayLength={isMobile ? 4.5 : 3.0}
   pulsating
-  fadeDistance={1.3}
-  saturation={1.1}
-  followMouse={typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches}
-  mouseInfluence={0.25}
-  noiseAmount={0.015}
-  distortion={0.08}
-  className="opacity-70 sm:opacity-80"
+  fadeDistance={isMobile ? 2.2 : 1.5}
+  saturation={isMobile ? 1.4 : 1.2}
+  followMouse={
+    typeof window !== 'undefined' &&
+    window.matchMedia('(pointer: fine)').matches
+  }
+  mouseInfluence={isMobile ? 0.15 : 0.3}
+  noiseAmount={0.02}
+  distortion={isMobile ? 0.18 : 0.1}
+  className={isMobile ? 'opacity-90' : 'opacity-80'}
 />
+
 
       </div>
 
