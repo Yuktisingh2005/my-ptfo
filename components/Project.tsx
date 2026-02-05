@@ -14,7 +14,7 @@ const projectData = [
   {
     color: '#060010',
     title: 'Glint – Media Gallery',
-    description: 'Next.js gallery with AI search, AWS S3, JWT auth, and smart organization',
+    description: 'Next.js gallery with AWS S3, JWT auth, and smart organization',
     label: 'AI-Powered',
     imageUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=600&fit=crop'
   },
@@ -28,7 +28,7 @@ const projectData = [
   {
     color: '#060010',
     title: 'AI Workflow Agent',
-    description: 'n8n automation for lead generation, engagement, and CRM integration',
+    description: 'Automated invoice processing via Telegram to Google Drive & Excel using n8n.',
     label: 'Automation',
     imageUrl: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop'
   }
@@ -67,11 +67,15 @@ const variants = {
 };
 
   return (
-    <div
+    <motion.div
       key={index}
       className="project-card relative rounded-xl min-h-[320px] flex flex-col overflow-hidden"
       ref={ref}
       onMouseEnter={handleMouseEnter}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      viewport={{ once: true }}
     >
   <motion.div
   className="relative h-48 w-full overflow-hidden bg-gray-900"
@@ -107,7 +111,7 @@ const variants = {
           Preview Project
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

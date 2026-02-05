@@ -7,12 +7,19 @@ import LogoLoop from "@/components/ui/LogoLoop";
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiPython, SiAmazon, SiDocker,
   SiCplusplus, SiJavascript, SiPhp, SiHtml5, SiCss3, SiMysql, SiPostgresql, SiRust,
-  SiMongodb, SiExpress, SiPandas, SiPostman, SiJupyter, SiFigma, SiApache
+  SiMongodb, SiExpress, SiPandas, SiPostman, SiJupyter, SiFigma, SiApache, SiGit
 } from 'react-icons/si';
 
 const handleAnimationComplete = () => {
   console.log('All letters have animated!');
 };
+
+// Custom AWS component to display "AWS" text instead of Amazon logo
+const AWSLogo = () => (
+  <div className="flex items-center justify-center w-full h-full">
+    <span className="text-orange-400 font-bold text-lg">AWS</span>
+  </div>
+);
 
 const techLogos = [
   // Languages
@@ -40,9 +47,10 @@ const techLogos = [
   { node: <SiPostman />, title: "Postman" },
   { node: <SiJupyter />, title: "Jupyter" },
   { node: <SiFigma />, title: "Figma" },
+  { node: <SiGit />, title: "Git" },
 
   // Cloud & Infrastructure
-  { node: <SiAmazon />, title: "AWS" },
+  { node: <AWSLogo />, title: "AWS" },
   { node: <SiDocker />, title: "Docker" },
   { node: <SiApache />, title: "Apache" },
 ];
@@ -51,50 +59,127 @@ const timelineData = [
   {
     title: "Sept 2025 - Jan 2026",
     content: (
-      <div className="space-y-4">
-        <h4 className="text-2xl font-bold text-white">Neuraltalk AI</h4>
-        <p className="text-purple-300 text-lg font-medium">n8n Automation Expert & Full Stack Developer</p>
-        <p className="text-neutral-300 leading-relaxed max-w-2xl">
-          Building intelligent automation workflows and scalable web applications
-        </p>
-        <button className="mt-6 px-6 py-2 text-white border border-purple-500/50 rounded-lg hover:bg-purple-500/10 transition-all duration-300">
-          View Certificate
-        </button>
+      <div className="space-y-6">
+        <div className="flex items-center gap-4">
+          <div>
+            <h4 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Neuraltalk AI
+            </h4>
+            <p className="text-blue-300 text-lg font-medium">n8n Automation & Front-end Developer Intern</p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm border border-blue-500/20 rounded-xl p-4">
+            <h5 className="text-blue-300 font-semibold mb-2">💻 Development</h5>
+            <ul className="text-neutral-300 space-y-1 text-sm">
+              <li>• SaaS platform development</li>
+              <li>• AI-driven automation workflows</li>
+              <li>• Cross-device UI optimization</li>
+            </ul>
+          </div>
+          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-4">
+            <h5 className="text-cyan-300 font-semibold mb-2">🔧 Tech Stack</h5>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-xs">MERN</span>
+              <span className="px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded-md text-xs">AWS</span>
+              <span className="px-2 py-1 bg-blue-600/20 text-blue-300 rounded-md text-xs">Git</span>
+              <span className="px-2 py-1 bg-cyan-600/20 text-cyan-300 rounded-md text-xs">Postman</span>
+              <span className="px-2 py-1 bg-blue-400/20 text-blue-300 rounded-md text-xs">Figma</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex gap-3">
+          <button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 text-sm font-medium">
+            View Certificate
+          </button>
+        </div>
       </div>
     ),
   },
   {
     title: "Jun 2025 - Jul 2025",
     content: (
-      <div className="space-y-4">
-        <h4 className="text-2xl font-bold text-white">CFEES, DRDO</h4>
-        <p className="text-green-300 text-lg font-medium">Full-Stack Developer Intern</p>
-        <ul className="text-neutral-300 space-y-2 max-w-2xl">
-          <li>• Designed web-based Complaint Management System</li>
-          <li>• Created responsive UI with dynamic filtering and dashboards</li>
-          <li>• Developed PHP backend with role-based access and MySQL integration</li>
-          <li>• Deployed on WAMP server with multi-role functionality</li>
-        </ul>
-        <button className="mt-6 px-6 py-2 text-white border border-green-500/50 rounded-lg hover:bg-green-500/10 transition-all duration-300">
-          View Certificate
-        </button>
+      <div className="space-y-6">
+        <div className="flex items-center gap-4">
+          <div>
+            <h4 className="text-2xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+              CFEES, DRDO
+            </h4>
+            <p className="text-green-300 text-lg font-medium">Full-Stack Developer Intern</p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-sm border border-green-500/20 rounded-xl p-4">
+            <h5 className="text-green-300 font-semibold mb-2">💻 Development</h5>
+            <ul className="text-neutral-300 space-y-1 text-sm">
+              <li>• Complaint Management System</li>
+              <li>• Role-based access control</li>
+              <li>• Dynamic dashboards</li>
+            </ul>
+          </div>
+          <div className="bg-gradient-to-br from-emerald-500/10 to-green-500/10 backdrop-blur-sm border border-emerald-500/20 rounded-xl p-4">
+            <h5 className="text-emerald-300 font-semibold mb-2">🔧 Tech Stack</h5>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-xs">HTML</span>
+              <span className="px-2 py-1 bg-emerald-500/20 text-emerald-300 rounded-md text-xs">CSS</span>
+              <span className="px-2 py-1 bg-green-600/20 text-green-300 rounded-md text-xs">JavaScript</span>
+              <span className="px-2 py-1 bg-emerald-600/20 text-emerald-300 rounded-md text-xs">PHP</span>
+              <span className="px-2 py-1 bg-green-400/20 text-green-300 rounded-md text-xs">MySQL</span>
+              <span className="px-2 py-1 bg-emerald-400/20 text-emerald-300 rounded-md text-xs">WAMP</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex gap-3">
+          <button className="px-6 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 text-sm font-medium">
+            View Certificate
+          </button>
+        </div>
       </div>
     ),
   },
   {
     title: "Nov 2024 - Dec 2024",
     content: (
-      <div className="space-y-4">
-        <h4 className="text-2xl font-bold text-white">Weroute Systems Pvt Ltd</h4>
-        <p className="text-blue-300 text-lg font-medium">Front-End Developer Intern</p>
-        <ul className="text-neutral-300 space-y-2 max-w-2xl">
-          <li>• Enhanced web applications using React.js with modern, scalable designs</li>
-          <li>• Implemented UI/UX improvements optimizing usability and performance</li>
-          <li>• Ensured cross-browser compatibility and mobile responsiveness</li>
-        </ul>
-        <button className="mt-6 px-6 py-2 text-white border border-blue-500/50 rounded-lg hover:bg-blue-500/10 transition-all duration-300">
-          View Certificate
-        </button>
+      <div className="space-y-6">
+        <div className="flex items-center gap-4">
+          <div>
+            <h4 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+              Weroute Systems Pvt Ltd
+            </h4>
+            <p className="text-purple-300 text-lg font-medium">Full-stack Developer Intern</p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm border border-purple-500/20 rounded-xl p-4">
+            <h5 className="text-purple-300 font-semibold mb-2">💻 Development</h5>
+            <ul className="text-neutral-300 space-y-1 text-sm">
+              <li>• Full-stack web applications</li>
+              <li>• UI/UX enhancements</li>
+              <li>• Cross-browser compatibility</li>
+            </ul>
+          </div>
+          <div className="bg-gradient-to-br from-purple-600/10 to-purple-500/10 backdrop-blur-sm border border-purple-600/20 rounded-xl p-4">
+            <h5 className="text-purple-300 font-semibold mb-2">🔧 Tech Stack</h5>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-md text-xs">MERN</span>
+              <span className="px-2 py-1 bg-purple-600/20 text-purple-300 rounded-md text-xs">Tailwind</span>
+              <span className="px-2 py-1 bg-purple-400/20 text-purple-300 rounded-md text-xs">Git</span>
+              <span className="px-2 py-1 bg-purple-700/20 text-purple-300 rounded-md text-xs">Postman</span>
+              <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-md text-xs">Figma</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex gap-3">
+          <button className="px-6 py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 text-sm font-medium">
+            View Certificate
+          </button>
+        </div>
       </div>
     ),
   },
@@ -119,11 +204,12 @@ export default function ExperienceSection() {
         <BackgroundRippleEffect />
       </div>
 
+      {/* Enhanced header */}
       <div className="absolute top-8 left-8 z-10">
         <div className="relative">
           <SplitText
             text="EXPERIENCES"
-            className="text-4xl font-bold text-white"
+            className="text-5xl font-bold text-white"
             delay={50}
             duration={1.25}
             ease="power3.out"
@@ -136,40 +222,44 @@ export default function ExperienceSection() {
             onLetterAnimationComplete={handleAnimationComplete}
             showCallback
           />
-          <div className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-purple-500 to-blue-500 w-full animate-pulse"></div>
+          <div className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 w-full animate-pulse rounded-full"></div>
+          <p className="text-gray-400 text-lg mt-4 font-light">My professional journey & growth</p>
         </div>
       </div>
 
-      <div className="relative z-10 pt-32">
+      {/* Floating elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-40 left-20 w-24 h-24 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      <div className="relative z-10 pt-40">
         <Timeline data={timelineData} />
       </div>
 
- <div className="relative mt-20 py-8 overflow-hidden">
-  {/* Gradient background with glow */}
-  <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/30 to-purple-900/20"></div>
-  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/10 to-transparent blur-xl"></div>
+      {/* Enhanced tech section */}
+      <div className="relative mt-32 py-12 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/40 via-blue-900/50 to-cyan-900/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/30 to-transparent blur-3xl"></div>
 
-  {/* Animated border */}
-  <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse"></div>
-  <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse shadow-lg shadow-purple-400/50"></div>
+        <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse shadow-lg shadow-cyan-400/50"></div>
 
-  {/* LogoLoop with enhanced styling */}
-  <div className="relative z-10 h-[80px] text-white/90 drop-shadow-lg">
-    <LogoLoop
-      logos={techLogos}
-      speed={80}
-      direction="left"
-      logoHeight={56}
-      gap={100}
-      pauseOnHover={false}
-      scaleOnHover={true}
-      fadeOut
-      fadeOutColor="rgba(0, 3, 13, 1)"
-      ariaLabel="Technologies"
-    />
-  </div>
-</div>
-
+        <div className="relative z-10 h-[90px] text-white drop-shadow-2xl">
+          <LogoLoop
+            logos={techLogos}
+            speed={40}
+            direction="left"
+            logoHeight={60}
+            gap={140}
+            pauseOnHover={false}
+            scaleOnHover={true}
+            fadeOut
+            fadeOutColor="rgba(0, 3, 13, 1)"
+            ariaLabel="Technologies"
+          />
+        </div>
+      </div>
     </section>
   );
 }

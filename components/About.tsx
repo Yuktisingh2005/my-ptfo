@@ -51,7 +51,7 @@ export function FloatingPhoto() {
           alt="Yukti"
           width={420}
           height={420}
-          className="rounded-2xl object-cover shadow-2xl"
+          className="rounded-2xl object-cover shadow-2xl w-full max-w-[250px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[420px] h-auto"
         />
       </CardItem>
     </CardContainer>
@@ -60,7 +60,10 @@ export function FloatingPhoto() {
 
 export default function About() {
   return (
-    <section className="relative w-full h-screen bg-[#050d1e] overflow-hidden">
+    <section className="relative w-full min-h-screen bg-gradient-to-b
+        from-[#00030d]
+        via-[#030c34]
+        to-[#00030d] overflow-hidden">
       {/* Floating Navbar */}
       <FloatingNav navItems={navItems} />
 
@@ -89,60 +92,62 @@ export default function About() {
       </div>
 
       {/* CONTENT */}
-      <div className="absolute inset-0 z-40 flex h-full items-center px-24">
-        {/* LEFT TEXT */}
-        <div className="w-1/2 flex flex-col gap-4">
-          <BlurText
-            text="HI!"
-            delay={200}
-            animateBy="words"
-            direction="top"
-            className="text-5xl font-bold text-white"
-          />
+      <div className="absolute inset-0 z-40 flex h-full items-center px-4 sm:px-8 md:px-12 lg:px-24">
+        <div className="w-full flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-0">
+          {/* LEFT TEXT */}
+          <div className="w-full lg:w-1/2 flex flex-col gap-4 text-center lg:text-left">
+            <BlurText
+              text="Hi!"
+              delay={200}
+              animateBy="words"
+              direction="top"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
+            />
 
-          <ShinyText
-            text="I'm Yukti Singh,"
-            className="text-3xl"
-          />
+            <ShinyText
+              text="I'm Yukti Singh,"
+              className="text-xl sm:text-2xl md:text-3xl"
+            />
 
-          <TextGenerateEffect
-            words="Working as a Software Developer and Automation Expert."
-            className="text-3xl text-[#f2f1f7]"
-          />
+            <TextGenerateEffect
+              words="Working as a Software Developer and Automation Expert."
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#f2f1f7]"
+            />
 
-          {/* Glassy Buttons */}
-          <div className="flex gap-4 mt-8">
-            <motion.button
-              className="px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white font-medium hover:bg-white/20 transition-all duration-300 shadow-[0_8px_32px_rgba(31,38,135,0.37)] hover:shadow-[0_8px_32px_rgba(31,38,135,0.6)]"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                const contactSection = document.querySelector('#contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              Contact Me
-            </motion.button>
+            {/* Glassy Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
+              <motion.button
+                className="px-4 sm:px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white font-medium hover:bg-white/20 transition-all duration-300 shadow-[0_8px_32px_rgba(31,38,135,0.37)] hover:shadow-[0_8px_32px_rgba(31,38,135,0.6)] text-sm sm:text-base"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  const contactSection = document.querySelector('#contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Contact Me
+              </motion.button>
 
-            <motion.button
-              className="px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-md border border-purple-500/30 rounded-xl text-white font-medium hover:from-purple-500/30 hover:to-blue-500/30 transition-all duration-300 shadow-[0_8px_32px_rgba(82,39,255,0.37)] hover:shadow-[0_8px_32px_rgba(82,39,255,0.6)]"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                // Add your resume link here
-                window.open('/resume.pdf', '_blank');
-              }}
-            >
-              View My Resume
-            </motion.button>
+              <motion.button
+                className="px-4 sm:px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-md border border-purple-500/30 rounded-xl text-white font-medium hover:from-purple-500/30 hover:to-blue-500/30 transition-all duration-300 shadow-[0_8px_32px_rgba(82,39,255,0.37)] hover:shadow-[0_8px_32px_rgba(82,39,255,0.6)] text-sm sm:text-base"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  // Add your resume link here
+                  window.open('/resume.pdf', '_blank');
+                }}
+              >
+                View My Resume
+              </motion.button>
+            </div>
           </div>
-        </div>
 
-        {/* RIGHT FLOATING PHOTO */}
-        <div className="w-1/2 flex justify-end">
-          <FloatingPhoto />
+          {/* RIGHT FLOATING PHOTO */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">
+            <FloatingPhoto />
+          </div>
         </div>
       </div>
     </section>

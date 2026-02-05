@@ -145,10 +145,8 @@ export default function ContactSection() {
       </div>
 
       {/* FULL WIDTH FOOTER */}
-      <motion.footer
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+      {/* FULL WIDTH FOOTER */}
+      <footer
         className="
           w-full
           mt-auto
@@ -166,7 +164,7 @@ export default function ContactSection() {
           Designed & Built with <span className="text-red-400">♥</span> and lots
           of ☕
         </p>
-      </motion.footer>
+      </footer>
     </section>
   );
 }

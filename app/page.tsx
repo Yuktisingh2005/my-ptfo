@@ -1,14 +1,13 @@
 import About from "@/components/About";
 import ExperienceSection  from '@/components/Experience'
-import Hero from "@/components/Hero";
-
 import ProjectSection from "@/components/Project";
 import ContactSection from "@/components/Contact";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <Hero/>
       <About />
       <ExperienceSection />
       <ProjectSection />
