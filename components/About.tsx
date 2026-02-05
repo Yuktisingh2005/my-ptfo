@@ -89,7 +89,7 @@ export default function About() {
       <div className="absolute inset-0 z-40 flex h-full items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-24 py-20 sm:py-24">
         <div className="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 lg:gap-12 xl:gap-16">
           {/* LEFT TEXT */}
-          <div className="w-full lg:w-1/2 flex flex-col gap-3 sm:gap-4 text-center lg:text-left max-w-2xl">
+          <div className="w-full lg:w-1/2 flex flex-col gap-3 sm:gap-4 text-center lg:text-left max-w-2xl items-center lg:items-start">
             <BlurText
               text="Hi!"
               delay={200}
