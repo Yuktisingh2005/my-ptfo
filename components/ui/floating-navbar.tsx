@@ -79,7 +79,7 @@ export const FloatingNav = ({
           ease: "easeInOut"
         }}
         className={cn(
-          "flex max-w-fit fixed top-6 inset-x-0 mx-auto border border-white/[0.1] rounded-2xl bg-gradient-to-r from-black/90 via-slate-900/90 to-black/90 backdrop-blur-xl shadow-[0px_8px_32px_rgba(0,0,0,0.4),0px_0px_0px_1px_rgba(255,255,255,0.05),inset_0px_1px_0px_rgba(255,255,255,0.1)] z-[5000] px-6 py-3 items-center justify-center space-x-2",
+          "flex max-w-fit fixed top-6 inset-x-0 mx-auto border border-white/[0.1] rounded-2xl bg-gradient-to-r from-black/90 via-slate-900/90 to-black/90 backdrop-blur-xl shadow-[0px_8px_32px_rgba(0,0,0,0.4),0px_0px_0px_1px_rgba(255,255,255,0.05),inset_0px_1px_0px_rgba(255,255,255,0.1)] z-[5000] px-3 sm:px-6 py-2 sm:py-3 items-center justify-center space-x-1 sm:space-x-2",
           className
         )}
       >
@@ -88,7 +88,7 @@ export const FloatingNav = ({
             key={`link=${idx}`}
             onClick={() => handleNavClick(navItem.link, idx)}
             className={cn(
-              "relative text-neutral-300 items-center flex space-x-2 px-4 py-2 rounded-xl transition-all duration-300 hover:text-white hover:bg-white/[0.08] group"
+              "relative text-neutral-300 items-center flex space-x-2 px-2 sm:px-4 py-1.5 sm:py-2 rounded-xl transition-all duration-300 hover:text-white hover:bg-white/[0.08] group"
             )}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -99,14 +99,7 @@ export const FloatingNav = ({
             transition={{ duration: 0.3 }}
           >
             <motion.span
-              className="block sm:hidden text-lg"
-              animate={activeItem === idx ? { rotate: [0, 360] } : {}}
-              transition={{ duration: 0.5 }}
-            >
-              {navItem.icon}
-            </motion.span>
-            <motion.span
-              className="hidden sm:block text-sm font-medium"
+              className="text-xs sm:text-sm font-medium"
               animate={activeItem === idx ? { y: [0, -2, 0] } : {}}
               transition={{ duration: 0.3 }}
             >
